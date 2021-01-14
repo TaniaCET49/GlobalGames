@@ -1,0 +1,91 @@
+﻿@model GlobalGames.Data.Entidades.Inscricoes
+
+@{
+    ViewData["Title"] = "Inscrição";
+}
+
+<section id="main">
+
+    <div class="container-fluid Title2">
+    </div>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="titulo">Registo</h1>
+
+                <div class="dark">
+                <form id="insc" asp-controller="Registos" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="ImageUrl" class="control-label"></label>
+                        <input asp-for="ImageUrl" class="form-control" placeholder="Imagem" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control formi " placeholder="Nome" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control formi" placeholder="Morada" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Birthday" class="control-label"></label>
+                        <input asp-for="Birthday" class="form-control formi birth" placeholder="Data de nascimento" />
+                        <span asp-validation-for="Birthday" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class=" bt1 btn btn-default">Registo</button>
+                    </div>
+
+                </form>
+                    </div>
+            </article>
+            </div>
+
+        
+
+
+
+
+    </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script type="text/javascript">
+        document.querySelector('#inscricao').className = 'selecionado';
+    </script>
+
+    <script>
+        const formu = document.querySelector("#formulario");
+
+        Event();
+
+        function Event() {
+            formu.addEventListener("submit", submit);
+        }
+
+        function submit(e) {
+            alert('Inscrição efetuada com sucesso')
+        }
+
+    </script>
+}
